@@ -15,10 +15,10 @@ type RegisterForm = RegistrationRequest;
     <div class="grid">
       @for (e of events; track e.id) {
         <div class="card">
-          <h3>Event Name: {{e.name}}</h3>
+          <h3>{{e.name}}</h3>
           <div class="badge">{{e.location}}</div>
-          <p>Description: {{e.description}}</p>
-          <small>Time: {{e.startTime}} → {{e.endTime}}</small>
+          <p>{{e.description}}</p>
+          <small>{{e.startTime}} → {{e.endTime}}</small>
 
           <form class="grid mt register" (ngSubmit)="register(e.id)">
             <input placeholder="Your name" [(ngModel)]="forms[e.id].name" name="name-{{e.id}}" required>
