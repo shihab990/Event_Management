@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./event-management-backend
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+    volumes:
+      - backend-data:/app/Data
+      - ./certs/localhost.pfx:/app/aspnetapp.pfx:ro
+    ports:
+      - "5001:8443"
+
+  frontend:
+    build:
+      context: ./event-management-frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
+    ports:
+      - "4200:443"
+    volumes:
+      - ./certs/localhost.crt:/etc/nginx/certs/selfsigned.crt:ro
+      - ./certs/localhost.key:/etc/nginx/certs/selfsigned.key:ro
+
+volumes:
+  backend-data:

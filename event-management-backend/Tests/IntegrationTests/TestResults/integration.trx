@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="2837f025-0ccc-4d92-a906-ababfb3f9261" name="@Mds-MacBook-Air 2025-11-13 03:53:51" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-13T03:53:51.9915590+06:00" queuing="2025-11-13T03:53:51.9915590+06:00" start="2025-11-13T03:53:50.8270570+06:00" finish="2025-11-13T03:53:51.9934300+06:00" />
+  <TestSettings name="default" id="e58283de-8625-41be-aaa4-3746e0b61d88">
+    <Deployment runDeploymentRoot="_Mds-MacBook-Air_2025-11-13_03_53_51" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="6a23927e-0db1-4193-b107-65cc1f77e1f9" testId="2eff4ab6-dadd-430c-e702-d98d74466b91" testName="IntegrationTests.Api.EventsControllerTests.GetAll_Returns200" computerName="Mds-MacBook-Air" duration="00:00:00.0010164" startTime="2025-11-13T03:53:51.9163710+06:00" endTime="2025-11-13T03:53:51.9171650+06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6a23927e-0db1-4193-b107-65cc1f77e1f9" />
+    <UnitTestResult executionId="32610cd7-de18-499c-b06e-f81ded6d8dcc" testId="fbe602d5-1d42-bf8d-d601-c2bef7fddc86" testName="IntegrationTests.Api.EventsControllerTests.GetAll_IncludesCreatedEvent" computerName="Mds-MacBook-Air" duration="00:00:00.0015617" startTime="2025-11-13T03:53:51.9386180+06:00" endTime="2025-11-13T03:53:51.9402130+06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="32610cd7-de18-499c-b06e-f81ded6d8dcc" />
+    <UnitTestResult executionId="aa168a30-5f76-4f68-9571-b283fb93c9dc" testId="21b341ad-1498-32a8-a819-cd9a2a150fe3" testName="IntegrationTests.Api.EventsControllerTests.Delete_RemovesEventFromListing" computerName="Mds-MacBook-Air" duration="00:00:00.0202236" startTime="2025-11-13T03:53:51.8981040+06:00" endTime="2025-11-13T03:53:51.9160420+06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa168a30-5f76-4f68-9571-b283fb93c9dc" />
+    <UnitTestResult executionId="294f8e08-71c9-460a-8de2-88fe8655d7be" testId="f5a3157e-4423-4bfe-e065-b4ecbc033b45" testName="IntegrationTests.Api.EventsControllerTests.Registrations_ReturnsEmptyArray_WhenNoRegistrations" computerName="Mds-MacBook-Air" duration="00:00:00.7756310" startTime="2025-11-13T03:53:51.1162930+06:00" endTime="2025-11-13T03:53:51.8952500+06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="294f8e08-71c9-460a-8de2-88fe8655d7be" />
+    <UnitTestResult executionId="745e7c6a-2e4d-4e91-97a6-4004d419c03e" testId="3fb76b15-c316-dda2-ec64-7e6f7a497645" testName="IntegrationTests.Api.EventsControllerTests.Register_ForMissingEvent_Returns404" computerName="Mds-MacBook-Air" duration="00:00:00.0027108" startTime="2025-11-13T03:53:51.9402780+06:00" endTime="2025-11-13T03:53:51.9429970+06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="745e7c6a-2e4d-4e91-97a6-4004d419c03e" />
+    <UnitTestResult executionId="6e2fc776-4263-4ef3-b267-ff91966aab64" testId="a6f1f364-1469-1538-98d3-b7894bb69102" testName="IntegrationTests.Api.EventsControllerTests.Create_RequiresAuth_ButWorksWithTestScheme" computerName="Mds-MacBook-Air" duration="00:00:00.0010399" startTime="2025-11-13T03:53:51.9374980+06:00" endTime="2025-11-13T03:53:51.9385510+06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e2fc776-4263-4ef3-b267-ff91966aab64" />
+    <UnitTestResult executionId="9e7d09cc-c8cb-4dfc-96b9-9e0486d8da1a" testId="fc884bd1-0e50-b2ad-ee71-e823e18d4db4" testName="IntegrationTests.Api.EventsControllerTests.Register_ForEvent_Succeeds_AndShowsInRegistrations" computerName="Mds-MacBook-Air" duration="00:00:00.0201175" startTime="2025-11-13T03:53:51.9172400+06:00" endTime="2025-11-13T03:53:51.9374240+06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e7d09cc-c8cb-4dfc-96b9-9e0486d8da1a" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="IntegrationTests.Api.EventsControllerTests.Delete_RemovesEventFromListing" storage="/users/shihab/downloads/event_management/event-management-backend/tests/integrationtests/bin/debug/net9.0/integrationtests.dll" id="21b341ad-1498-32a8-a819-cd9a2a150fe3">
+      <Execution id="aa168a30-5f76-4f68-9571-b283fb93c9dc" />
+      <TestMethod codeBase="/Users/shihab/Downloads/Event_Management/event-management-backend/Tests/IntegrationTests/bin/Debug/net9.0/IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="IntegrationTests.Api.EventsControllerTests" name="Delete_RemovesEventFromListing" />
+    </UnitTest>
+    <UnitTest name="IntegrationTests.Api.EventsControllerTests.Register_ForMissingEvent_Returns404" storage="/users/shihab/downloads/event_management/event-management-backend/tests/integrationtests/bin/debug/net9.0/integrationtests.dll" id="3fb76b15-c316-dda2-ec64-7e6f7a497645">
+      <Execution id="745e7c6a-2e4d-4e91-97a6-4004d419c03e" />
+      <TestMethod codeBase="/Users/shihab/Downloads/Event_Management/event-management-backend/Tests/IntegrationTests/bin/Debug/net9.0/IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="IntegrationTests.Api.EventsControllerTests" name="Register_ForMissingEvent_Returns404" />
+    </UnitTest>
+    <UnitTest name="IntegrationTests.Api.EventsControllerTests.GetAll_IncludesCreatedEvent" storage="/users/shihab/downloads/event_management/event-management-backend/tests/integrationtests/bin/debug/net9.0/integrationtests.dll" id="fbe602d5-1d42-bf8d-d601-c2bef7fddc86">
+      <Execution id="32610cd7-de18-499c-b06e-f81ded6d8dcc" />
+      <TestMethod codeBase="/Users/shihab/Downloads/Event_Management/event-management-backend/Tests/IntegrationTests/bin/Debug/net9.0/IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="IntegrationTests.Api.EventsControllerTests" name="GetAll_IncludesCreatedEvent" />
+    </UnitTest>
+    <UnitTest name="IntegrationTests.Api.EventsControllerTests.Register_ForEvent_Succeeds_AndShowsInRegistrations" storage="/users/shihab/downloads/event_management/event-management-backend/tests/integrationtests/bin/debug/net9.0/integrationtests.dll" id="fc884bd1-0e50-b2ad-ee71-e823e18d4db4">
+      <Execution id="9e7d09cc-c8cb-4dfc-96b9-9e0486d8da1a" />
+      <TestMethod codeBase="/Users/shihab/Downloads/Event_Management/event-management-backend/Tests/IntegrationTests/bin/Debug/net9.0/IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="IntegrationTests.Api.EventsControllerTests" name="Register_ForEvent_Succeeds_AndShowsInRegistrations" />
+    </UnitTest>
+    <UnitTest name="IntegrationTests.Api.EventsControllerTests.Create_RequiresAuth_ButWorksWithTestScheme" storage="/users/shihab/downloads/event_management/event-management-backend/tests/integrationtests/bin/debug/net9.0/integrationtests.dll" id="a6f1f364-1469-1538-98d3-b7894bb69102">
+      <Execution id="6e2fc776-4263-4ef3-b267-ff91966aab64" />
+      <TestMethod codeBase="/Users/shihab/Downloads/Event_Management/event-management-backend/Tests/IntegrationTests/bin/Debug/net9.0/IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="IntegrationTests.Api.EventsControllerTests" name="Create_RequiresAuth_ButWorksWithTestScheme" />
+    </UnitTest>
+    <UnitTest name="IntegrationTests.Api.EventsControllerTests.GetAll_Returns200" storage="/users/shihab/downloads/event_management/event-management-backend/tests/integrationtests/bin/debug/net9.0/integrationtests.dll" id="2eff4ab6-dadd-430c-e702-d98d74466b91">
+      <Execution id="6a23927e-0db1-4193-b107-65cc1f77e1f9" />
+      <TestMethod codeBase="/Users/shihab/Downloads/Event_Management/event-management-backend/Tests/IntegrationTests/bin/Debug/net9.0/IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="IntegrationTests.Api.EventsControllerTests" name="GetAll_Returns200" />
+    </UnitTest>
+    <UnitTest name="IntegrationTests.Api.EventsControllerTests.Registrations_ReturnsEmptyArray_WhenNoRegistrations" storage="/users/shihab/downloads/event_management/event-management-backend/tests/integrationtests/bin/debug/net9.0/integrationtests.dll" id="f5a3157e-4423-4bfe-e065-b4ecbc033b45">
+      <Execution id="294f8e08-71c9-460a-8de2-88fe8655d7be" />
+      <TestMethod codeBase="/Users/shihab/Downloads/Event_Management/event-management-backend/Tests/IntegrationTests/bin/Debug/net9.0/IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="IntegrationTests.Api.EventsControllerTests" name="Registrations_ReturnsEmptyArray_WhenNoRegistrations" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="2eff4ab6-dadd-430c-e702-d98d74466b91" executionId="6a23927e-0db1-4193-b107-65cc1f77e1f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fbe602d5-1d42-bf8d-d601-c2bef7fddc86" executionId="32610cd7-de18-499c-b06e-f81ded6d8dcc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21b341ad-1498-32a8-a819-cd9a2a150fe3" executionId="aa168a30-5f76-4f68-9571-b283fb93c9dc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f5a3157e-4423-4bfe-e065-b4ecbc033b45" executionId="294f8e08-71c9-460a-8de2-88fe8655d7be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3fb76b15-c316-dda2-ec64-7e6f7a497645" executionId="745e7c6a-2e4d-4e91-97a6-4004d419c03e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6f1f364-1469-1538-98d3-b7894bb69102" executionId="6e2fc776-4263-4ef3-b267-ff91966aab64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc884bd1-0e50-b2ad-ee71-e823e18d4db4" executionId="9e7d09cc-c8cb-4dfc-96b9-9e0486d8da1a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="7" executed="7" passed="7" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.0.0+e341b939fe (64-bit .NET 9.0.10)
+[xUnit.net 00:00:00.03]   Discovering: IntegrationTests
+[xUnit.net 00:00:00.05]   Discovered:  IntegrationTests
+[xUnit.net 00:00:00.06]   Starting:    IntegrationTests
+[03:53:51 INF] HTTP POST /api/Events/create responded 200 in 51.6342 ms
+[03:53:51 INF] HTTP GET /api/Events/1/registrations responded 200 in 19.2033 ms
+[03:53:51 INF] HTTP POST /api/Events/create responded 200 in 2.7153 ms
+[03:53:51 INF] HTTP DELETE /api/Events/2 responded 204 in 11.6088 ms
+[03:53:51 INF] HTTP GET /api/Events responded 200 in 2.9440 ms
+[03:53:51 INF] HTTP GET /api/Events responded 200 in 0.5173 ms
+[03:53:51 INF] HTTP POST /api/Events/create responded 200 in 7.1248 ms
+[03:53:51 INF] HTTP POST /api/Events/3/register responded 200 in 10.1570 ms
+[03:53:51 INF] HTTP GET /api/Events/3/registrations responded 200 in 0.4570 ms
+[03:53:51 INF] HTTP POST /api/Events/create responded 200 in 0.4234 ms
+[03:53:51 INF] HTTP POST /api/Events/create responded 200 in 0.3690 ms
+[03:53:51 INF] HTTP GET /api/Events responded 200 in 0.2644 ms
+[03:53:51 INF] HTTP POST /api/Events/99999/register responded 404 in 2.2668 ms
+[xUnit.net 00:00:00.90]   Finished:    IntegrationTests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

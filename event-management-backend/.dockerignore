@@ -1,0 +1,11 @@
+bin/
+obj/
+**/*.user
+**/*.rsuser
+**/*.suo
+**/.vs/
+.git/
+.github/
+TestResults/
+Logs/
+Data/
