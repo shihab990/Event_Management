@@ -30,7 +30,8 @@ Logs/
 
 
 # Local data files
-event-management-backend/WebApi/Data/
+event-management-backend/WebApi/Data/*
+!event-management-backend/WebApi/Data/.gitkeep
 event-management-backend/Tests/IntegrationTests/bin/
 event-management-backend/Tests/IntegrationTests/obj/
 event-management-backend/Tests/UnitTests/bin/
@@ -39,4 +40,3 @@ event-management-backend/Tests/UnitTests/obj/
 # Environment / secrets
 *.env
 *.env.*
-

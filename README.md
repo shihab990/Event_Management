@@ -12,7 +12,31 @@ Docker builds the backend (restore, publish, runtime image) and the frontend (pr
 
 Before the first run you only need three tools: Git, Node/npm (if you ever want to build the Angular app outside Docker), and Docker Desktop 4.24 or later. Clone the repo, keep the default folder structure, and stay in the project root when running compose commands.
 
-The containers rely on the local development certificate in `certs/`. Trust `certs/local-dev-ca.pem` on your machine once (Keychain on macOS, certutil on Windows, `update-ca-certificates` on Linux) so the browser stops warning about HTTPS.
+### Generate local TLS certificates
+
+The compose file bind-mounts `certs/localhost.pfx`, `certs/localhost.crt`, and `certs/localhost.key` into the containers. Because `certs/` is gitignored you must create those files locally **before** running Docker, otherwise Docker will create placeholder directories and fail with “are you trying to mount a directory onto a file?”.
+
+Run the helper once after cloning:
+
+```bash
+./scripts/generate-dev-certs.sh --force
+```
+
+Add `--force` if you need to overwrite existing files, or pass `ASPNETCORE_HTTPS_CERT_PASSWORD=<value>` to change the PFX password. The script also drops `certs/local-dev-ca.pem`; trust that file on your machine (Keychain on macOS, certutil on Windows, `update-ca-certificates` on Linux) so browsers accept the HTTPS endpoints without warnings.
+
+### Backend data directory
+
+Docker bind-mounts `event-management-backend/WebApi/Data` into the backend container so the SQLite file is available on the host. The folder is checked in with a `.gitkeep` placeholder but remains ignored otherwise, so you can inspect or delete the data locally without touching Git history.
+
+#### Trust the certificate authority
+
+Chrome and other browsers only accept the self-signed certificates after the CA file is trusted. Import `certs/local-dev-ca.pem` once per machine:
+
+- **macOS**: `sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain certs/local-dev-ca.pem`
+- **Windows**: Run `certmgr.msc`, right-click **Trusted Root Certification Authorities > Certificates**, choose **All Tasks > Import**, and select `certs\local-dev-ca.pem`.
+- **Linux** (Debian/Ubuntu): `sudo cp certs/local-dev-ca.pem /usr/local/share/ca-certificates/event-management-local-dev-ca.crt && sudo update-ca-certificates`
+
+Restart the browser if it was open. If you regenerate the certificates later (e.g., via `--force`), re-import the new CA file.
 
 ## Daily workflow
 
@@ -22,7 +46,7 @@ The containers rely on the local development certificate in `certs/`. Trust `cer
 - Inspect logs: `docker compose logs -f backend` or `docker compose logs -f frontend`.
 - Clean up volumes and images if you want a fresh start: `docker compose down --volumes --rmi local`.
 
-Swagger is always available at `https://localhost:5001/swagger`, and the seeded admin user is `admin / Admin@123`. Event data lives inside the `backend-data` named volume, so the SQLite file survives container restarts.
+Swagger is always available at `https://localhost:5001/swagger`, the seeded admin user: `admin` and password: `Admin@123`. Event data lives inside `event-management-backend/WebApi/Data`, so the SQLite file survives container restarts and stays next to the backend project.
 
 ## Testing quick reference
 
